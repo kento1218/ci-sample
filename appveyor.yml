@@ -1,0 +1,7 @@
+version: 1.0.{build}
+build_script:
+- echo hello > hello.txt
+- 7z a $(configuration).zip hello.txt
+test: off
+artifacts:
+- path: '*.zip'
