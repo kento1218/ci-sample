@@ -7,10 +7,11 @@ configuration:
 - Release_XP
 build_script:
 - echo hello > hello.txt
-- 7z a %CONFIGURATION%.zip hello.txt
+- mkdir pkg
+- 7z a pkg/%CONFIGURATION%.zip hello.txt
 test: off
 artifacts:
-- path: '*.zip'
+- path: pkg/*.zip
 deploy:
   provider: GitHub
   auth_token:
