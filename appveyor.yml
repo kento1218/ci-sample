@@ -1,4 +1,9 @@
 version: 1.0.{build}
+configuration:
+- Debug
+- Debug_XP
+- Release
+- Release_XP
 build_script:
 - echo hello > hello.txt
 - 7z a $(configuration).zip hello.txt
